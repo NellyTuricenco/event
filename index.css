@@ -1,0 +1,27 @@
+
+#element1 {
+  background-color: blue;
+  width: 100px;
+  border: 2px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font: 15px arial, bold;
+}
+
+#element2 {
+  background-color: green;
+  padding: 10px;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+  width: 100px;
+  font: 15px arial, bold;
+}
+
+#element3 {
+  background-color: red;
+ padding: 10px;
+  border: 2px solid darkred;
+  border-radius: 5px;
+  width: 100px;
+  font: 15px arial, bold;
+}
