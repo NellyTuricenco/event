@@ -4,34 +4,36 @@ element2.onclick = function (evt) {
   console.log('using DOM properties', phase);
 };
 
-
-element3.onclick = function handler(evt) {
+function handler(evt) {
   var phase = evt.eventPhase;
   myP.innerHTML = 'You clicked the third button';
   console.log('using addEventListener', phase);
-};
+}
+
 element3.addEventListener('click', handler);
 
-// function clickMe() {
-//     this.first = function () {
-//         alert('You clicked the first button');
-//     };
-// };
-// this.second = function () {
-//     alert('You clicked the second button');
-// };
-// this.third = function () {
-//     alert('You clicked the third button');
-// };
+function clickMe(elem) {
+  this.first = function () {
+    alert('You clicked the first button');
+  };
 
-// var self = this;
+  this.second = function () {
+    alert('You clicked the second button');
+  };
 
-// elem.onclick = function (e) {
-//     var target = e.target;
-//     var action = target.getAttribute('data-action');
-//     if (action) {
-//         self[action]();
-//     }
-// };
+  this.third = function () {
+    alert('You clicked the third button');
+  };
 
-// new clickMe(clickMe);
+  var self = this;
+
+  elem.onclick = function (e) {
+    var target = e.target;
+    var action = target.getAttribute('data-action');
+    if (action) {
+      self[action]();
+    }
+  };
+}
+
+new ClickMe(delegation);

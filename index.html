@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Events homework</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./index.css" />
     <script src="./index.js" defer></script>
 </head>
 
 <body>
     <h1>Events homework</h1>
 
-    <input id=element1 value="First" onclick="myFunction()" type="button">
+    <div id="delegation">
+        <input id="element1" value="First" onclick="myFunction()" type="button" data-action="first" />
+        <input id="element2" value="Second" type="button" data-action="second" />
+        <input id="element3" value="Third" type="button" data-action="third" />
+    </div>
 
-    <input id=element2 value="Second" type="button">
-
-    <input id=element3 value="Third" type="button">
-
-    <p id=myP>Please click on any button</p>
+    <p id="myP">Please click on any button</p>
 
     <script>
         function myFunction() {
-            document.getElementById("myP").innerHTML = "You clicked the first button";
-            console.log("Using HTML attribute 2")
-
+            document.getElementById("myP").innerHTML ="You clicked the first button";
+            console.log("Using HTML attribute 2");
         }
     </script>
-
-    <!-- <div id="clickMe">
-        <button data-action="first">First</button>
-        <button data-action="second">Second</button>
-        <button data-action="third">Third</button>
-
-    </div> -->
-
-
 </body>
-
 </html>
